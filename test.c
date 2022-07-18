@@ -42,8 +42,36 @@
 // 	ft_toupper_test();
 // 	return 0;
 // }
+// int main(int argc, char **argv)
+// {
+// 	int array[3][4] = {{1, 2, 3, 4, 5}, {10, 20, 30, 40, 50}, {100, 200, 300, 400, 500}, {1000, 2000, 3000, 4000, 5000}};
+// 	printf("%d\n", &array[0][2]);
+// }
+
+int game(int gu)
+{
+	int secnum = 20;
+
+	if (secnum == gu)
+	{
+		printf("correct guess\n");
+		return(0);
+	}
+	else if (secnum != gu)
+	{
+		printf("Wrong guess\n");
+		return(0);
+	}
+	else
+		printf("Error\n");
+	return (0);
+}
+
 int main(int argc, char **argv)
 {
-	int array[3][4] = {{1, 2, 3, 4, 5}, {10, 20, 30, 40, 50}, {100, 200, 300, 400, 500}, {1000, 2000, 3000, 4000, 5000}};
-	printf("%d\n", &array[0][2]);
+	int num = 20;
+	int *pt = &num;
+
+	printf("%p\n", &pt);
+	return 0;
 }
