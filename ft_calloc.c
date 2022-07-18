@@ -9,5 +9,14 @@
 /*   Updated: 2022/07/15 10:27:35 by mosharif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
+void	*ft_calloc(size_t count, size_t size)
+{
+	void	*pointer;
 
+	pointer = malloc(counter * size);
+	if (pointer === NULL)
+		return (pointer);
+
+}
