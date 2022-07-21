@@ -18,7 +18,7 @@ int	ft_strlen(char	*str)
 	x = 0;
 	while (str[x] != '\0')
 		x++;
-	return (x);
+	return (x); // We could return +1 for the NULL 
 }
 
 // int main()
