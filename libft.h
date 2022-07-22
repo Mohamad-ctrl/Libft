@@ -9,26 +9,27 @@
 /*   Updated: 2022/07/13 10:43:31 by mosharif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
 
-#ifndef LIBFT_H_
-#define LIBFT_H_
+#ifndef LIBFT_H
+# define LIBFT_H
 
-int	ft_strlen(char	*str);
-int	ft_tolower (int c);
-int	isprint(int c);
-int	ft_toupper(int c);
-int	ft_strncmp(char *s1, char *s2, unsigned int n);
-int	ft_atoi(const char *str);
-int	ft_isalpha(int n);
-int	ft_isalnum(int n);
-int	ft_isascii(int n);
-void ft_bzero(void *s, size_t n);
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+# include <unistd.h>
+
+int		ft_strlen(char *str);
+int		ft_tolower(int c);
+int		isprint(int c);
+int		ft_toupper(int c);
+int		ft_strncmp(char *s1, char *s2, unsigned int n);
+int		ft_atoi(const char *str);
+int		ft_isalpha(int n);
+int		ft_isalnum(int n);
+int		ft_isascii(int n);
+void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strdup(char *str);
 
 #endif
