@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
 
 #ifndef LIBFT_H_
 #define LIBFT_H_
@@ -28,5 +29,6 @@ int	ft_isalpha(int n);
 int	ft_isalnum(int n);
 int	ft_isascii(int n);
 void ft_bzero(void *s, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 #endif
