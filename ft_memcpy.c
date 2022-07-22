@@ -18,7 +18,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	if (!dst && !src)
 		return (0);
 	x = 0;
-	while (x > n)
+	while (x < n)
 	{
 		((char *)dst)[x] = ((char *)src)[x];
 		x++;
