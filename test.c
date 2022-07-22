@@ -126,15 +126,15 @@
 
 // strdup
 
-// int	main(int argc, cha+r **argv)
-// {
-// 	char	*mine;
-// 	char	*theirs;
+int	main(int argc, char **argv)
+{
+	char	*mine;
+	char	*theirs;
 
-// 	mine = NULL;
-// 	theirs = NULL;
-// 	mine = ft_strdup(argv[1]);
-// 	theirs = strdup(argv[1]);
-// 	printf(":%s:\n:%s:", mine, theirs);
-// 	return (0);
-// }
+	mine = NULL;
+	theirs = NULL;
+	mine = ft_strdup(argv[1]);
+	theirs = strdup(argv[1]);
+	printf(":%s:\n:%s:", mine, theirs);
+	return (0);
+}
