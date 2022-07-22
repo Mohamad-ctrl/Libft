@@ -18,7 +18,7 @@
 #ifndef LIBFT_H_
 #define LIBFT_H_
 
-int ft_strlen(char	*str);
+int	ft_strlen(char	*str);
 int	ft_tolower (int c);
 int	isprint(int c);
 int	ft_toupper(int c);
@@ -27,5 +27,6 @@ int	ft_atoi(const char *str);
 int	ft_isalpha(int n);
 int	ft_isalnum(int n);
 int	ft_isascii(int n);
+void ft_bzero(void *s, size_t n);
 
 #endif

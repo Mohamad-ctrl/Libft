@@ -11,8 +11,14 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-void bzero(void *s, size_t n)
+void ft_bzero(void *s, size_t n)
 {
-	if (n == 0)
-		break;
+	size_t i;
+
+	i = 0;
+	while (n > i)
+	{
+		((char *)s)[i] = 0;
+		i++;
+	}
 }

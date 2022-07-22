@@ -18,8 +18,7 @@ int	ft_atoi(const char *str)
 
 	sinal = 1;
 	num = 0;
-	while (*str == ' ' || *str == '\t' || *str == '\n'
-		|| *str == '\v' || *str == '\f' || *str == '\r')
+	while ((*str <= 13 && *str >= 9) || *str == 32)
 		str++;
 	while (*str == '-' || *str == '+')
 	{
