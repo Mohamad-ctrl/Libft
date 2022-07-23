@@ -126,15 +126,42 @@
 
 // strdup
 
-int	main(int argc, char **argv)
-{
-	char	*mine;
-	char	*theirs;
+// int	main(int argc, char **argv)
+// {
+// 	char	*mine;
+// 	char	*theirs;
 
-	mine = NULL;
-	theirs = NULL;
-	mine = ft_strdup(argv[1]);
-	theirs = strdup(argv[1]);
-	printf(":%s:\n:%s:", mine, theirs);
-	return (0);
+// 	mine = NULL;
+// 	theirs = NULL;
+// 	mine = ft_strdup(argv[1]);
+// 	theirs = strdup(argv[1]);
+// 	printf(":%s:\n:%s:", mine, theirs);
+// 	return (0);
+// }
+
+
+// strchr
+
+// int main()
+// {
+// 	char so[50] = "Hey how are you doing !";
+// 	char *res = ft_strchr(so, '!');
+
+// 	printf("%s\n", res);
+// 	return 0;
+// }
+
+
+// memset
+
+int main(void)
+{
+	char array[10];
+	ft_memset(array, 'c', sizeof(char) * 10);
+	// memset(array, 'c', sizeof(char) * 10);
+
+	for (int i = 0; i < 10; ++i)
+		printf("%c\n", array[i]);
+	printf("\n");
+	return 0;
 }
