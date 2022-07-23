@@ -154,14 +154,26 @@
 
 // memset
 
-int main(void)
-{
-	char array[10];
-	ft_memset(array, 'c', sizeof(char) * 10);
-	// memset(array, 'c', sizeof(char) * 10);
+// int main(void)
+// {
+// 	char array[10];
+// 	ft_memset(array, 'c', sizeof(char) * 10);
+// 	// memset(array, 'c', sizeof(char) * 10);
 
-	for (int i = 0; i < 10; ++i)
-		printf("%c\n", array[i]);
-	printf("\n");
+// 	for (int i = 0; i < 10; ++i)
+// 		printf("%c\n", array[i]);
+// 	printf("\n");
+// 	return 0;
+// }
+
+
+// memmove
+
+int main()
+{
+	char ar[] = "start stop";
+	// ft_memmove(ar, ar + 2, 3 * sizeof(char));
+	memmove(ar, ar + 2, 3 * sizeof(char));
+	printf("%s\n", ar);
 	return 0;
 }
