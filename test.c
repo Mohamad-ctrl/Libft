@@ -156,12 +156,13 @@
 
 int main(void)
 {
-	char array[10];
-	ft_memset(array, 'c', sizeof(char) * 10);
-	// memset(array, 'c', sizeof(char) * 10);
+	// char array[10] = "aaaaaaaaaa";
+	char array[10]; // We can fill an emty memory or we can replace it memory
+	// ft_memset(array, 'c', ft_strlen(array));
+	 ft_memset(array, 'c', sizeof(char) * 10); // If you go above the max size it will fill the whole memory with no errors
 
 	for (int i = 0; i < 10; ++i)
-		printf("%c\n", array[i]);
+		printf("[%c]", array[i]);
 	printf("\n");
 	return 0;
 }
