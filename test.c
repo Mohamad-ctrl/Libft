@@ -76,6 +76,16 @@
 // 	return (0);
 // }
 
+// atoi
+
+// int main(int ac, char **av)
+// {
+// 	printf("My Atoi :%d:", ft_atoi(av[1]));
+// 	printf("\n");
+// 	printf("Real Atoi :%d:", atoi(av[1]));
+// 	return 0;
+// }
+
 // int game(int gu)
 // {
 // 	int secnum = 20;
@@ -138,3 +148,49 @@
 // 	printf(":%s:\n:%s:", mine, theirs);
 // 	return (0);
 // }
+<<<<<<< HEAD
+=======
+
+
+// strchr
+
+// int main()
+// {
+// 	char so[50] = "Hey how are you doing !";
+// 	char *res = ft_strchr(so, '!');
+
+// 	printf("%s\n", res);
+// 	return 0;
+// }
+
+
+// memset
+
+
+// int main(void)
+// {
+// 	// char array[10] = "aaaaaaaaaa";
+// 	char array[10]; // We can fill an emty memory or we can replace it memory
+// 	// ft_memset(array, 'c', ft_strlen(array));
+// 	 ft_memset(array, 'c', sizeof(char) * 10); // If you go above the max size it will fill the whole memory with no errors
+
+// 	for (int i = 0; i < 10; ++i)
+// 		printf("[%c]", array[i]);
+// 	printf("\n");
+// 	return 0;
+// }
+
+
+// memmove
+
+int main()
+{
+	char ar[8] = "Hey Mate";
+	char re[8];
+	ft_memmove(re, ar, 8);
+	// memmove(ar, ar + 2, 3 * sizeof(char));
+	printf("%c\n", re);
+	printf("%c\n", ar);
+	return (0);
+}
+>>>>>>> 9a32b95949b036a910976dcbae4e4431565bf973
