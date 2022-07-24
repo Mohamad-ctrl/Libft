@@ -17,14 +17,14 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	char *d;
 	char temp[256];
 
-	d = (char *)dest;
+	d = dest;
 	x = 0;
 	while (x < n)
 	{
-		temp[x] = ((char *)src)[x];
-		x++;
+		 temp[x] = ((char *)src)[x];
+		 d[x] = temp[x];
+		 x++;
 	}
-	d = temp;
 	return (d);
 }
 

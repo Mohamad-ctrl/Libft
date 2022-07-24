@@ -76,6 +76,16 @@
 // 	return (0);
 // }
 
+// atoi
+
+// int main(int ac, char **av)
+// {
+// 	printf("My Atoi :%d:", ft_atoi(av[1]));
+// 	printf("\n");
+// 	printf("Real Atoi :%d:", atoi(av[1]));
+// 	return 0;
+// }
+
 // int game(int gu)
 // {
 // 	int secnum = 20;
@@ -173,8 +183,11 @@
 
 int main()
 {
-	char ar[] = "start stop";
-	// ft_memmove(ar, ar + 2, 3 * sizeof(char));
-	memmove(ar, ar + 2, 3 * sizeof(char));
-	printf("%s\n", ar);
-
+	char ar[8] = "Hey Mate";
+	char re[8];
+	ft_memmove(re, ar, 8);
+	// memmove(ar, ar + 2, 3 * sizeof(char));
+	printf("%c\n", re);
+	printf("%c\n", ar);
+	return (0);
+}
