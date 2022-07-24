@@ -126,7 +126,7 @@
 
 // strdup
 
-// int	main(int argc, char **argv)
+// int	main(int argc, cha+r **argv)
 // {
 // 	char	*mine;
 // 	char	*theirs;
@@ -138,31 +138,3 @@
 // 	printf(":%s:\n:%s:", mine, theirs);
 // 	return (0);
 // }
-
-
-// strchr
-
-// int main()
-// {
-// 	char so[50] = "Hey how are you doing !";
-// 	char *res = ft_strchr(so, '!');
-
-// 	printf("%s\n", res);
-// 	return 0;
-// }
-
-
-// memset
-
-int main(void)
-{
-	// char array[10] = "aaaaaaaaaa";
-	char array[10]; // We can fill an emty memory or we can replace it memory
-	// ft_memset(array, 'c', ft_strlen(array));
-	 ft_memset(array, 'c', sizeof(char) * 10); // If you go above the max size it will fill the whole memory with no errors
-
-	for (int i = 0; i < 10; ++i)
-		printf("[%c]", array[i]);
-	printf("\n");
-	return 0;
-}

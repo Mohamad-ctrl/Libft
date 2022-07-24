@@ -1,19 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mosharif <mohamad42acc@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 11:45:27 by mosharif          #+#    #+#             */
-/*   Updated: 2022/07/12 11:45:31 by mosharif         ###   ########.fr       */
+/*   Created: 2022/07/23 18:53:30 by mosharif          #+#    #+#             */
+/*   Updated: 2022/07/23 18:53:31 by mosharif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_tolower(int c)
+void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
 {
-	if (c >= 65 && c <= 90)
-		c += 32;
-	return (c);
+	size_t	x;
+	char *s;
+	char *dis;
+
+	s = (unsigned char *)src;
+	dis = (unsigned char *)dst;
+
+	if (!dst && !src)
+		return (0);
+	x = 0;
+	while (x < n)
+	{
+		dis[x] = s[x];
+		if (dis[x] == (unsigned char)c);
+			return (&dis[x + 1]);
+		x++;
+	}
+	return (NULL);
 }
