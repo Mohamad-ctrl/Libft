@@ -110,14 +110,11 @@
 // int main(int argc, char **argv)
 // {
 // 	char *final;
-// 	char *final2;
 // 	char src[50] = "hey how are you!?";
-// 	char dis[50];
+// 	char dis[60];
 //  	final = ft_memcpy(dis, src, ft_strlen(src));
-//  	final2 = memcpy(dis, src, 6);
 // 	printf("%s\n", final);
 // 	printf("\n");
-// 	printf("%s\n", final2);
 // }
 
 // memcmp
@@ -148,9 +145,6 @@
 // 	printf(":%s:\n:%s:", mine, theirs);
 // 	return (0);
 // }
-<<<<<<< HEAD
-=======
-
 
 // strchr
 
@@ -183,14 +177,26 @@
 
 // memmove
 
-int main()
+// int main()
+// {
+// 	char ar[8] = "Hey Mate";
+// 	char re[8];
+// 	ft_memmove(re, ar, 8);
+// 	// memmove(ar, ar + 2, 3 * sizeof(char));
+// 	printf("%c\n", re);
+// 	printf("%c\n", ar);
+// 	return (0);
+// }
+
+
+// strnstr
+
+int main(void)
 {
-	char ar[8] = "Hey Mate";
-	char re[8];
-	ft_memmove(re, ar, 8);
-	// memmove(ar, ar + 2, 3 * sizeof(char));
-	printf("%c\n", re);
-	printf("%c\n", ar);
-	return (0);
+	char st[50] = "hey how you doing baby!";
+	char lok[2] = "y";
+	char *res;
+	res = ft_strnstr(st, lok, ft_strlen(st));
+	printf("%s\n", res);
+	return 0;
 }
->>>>>>> 9a32b95949b036a910976dcbae4e4431565bf973

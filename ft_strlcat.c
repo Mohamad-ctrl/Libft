@@ -11,22 +11,22 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
 {
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
-	while (dest[i] && i < size)
+	while (((char *)dst)[i] && i < dstsize)
 		i++;
 	j = i;
-	while (src[i - j] && i + 1 < size)
+	while (((char *)src)[i - j] && i + 1 < dstsize)
 	{
-		dest[i] = src[i - j];
+		((char *)dst)[i] = ((char *)src)[i - j];
 		i++;
 	}
-	if (j < size)
-		dest[i] = '\0';
-	return (j + ft_strlen(src));
+	if (j < dstsize)
+		((char *)dst )[i] = '\0';
+	return (j + ft_strlen(((char *)src)));
 }
