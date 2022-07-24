@@ -177,26 +177,26 @@
 
 // memmove
 
-// int main()
-// {
-// 	char ar[8] = "Hey Mate";
-// 	char re[8];
-// 	ft_memmove(re, ar, 8);
-// 	// memmove(ar, ar + 2, 3 * sizeof(char));
-// 	printf("%c\n", re);
-// 	printf("%c\n", ar);
-// 	return (0);
-// }
+int main()
+{
+	char sr[20] = "start stop";
+	char *res;
+
+ 	res = ft_memmove(sr, sr + 6, 4);
+	//res = memmove(dis, sr, 20);
+	printf("%s\n", res);
+	return (0);
+}
 
 
 // strnstr
 
-int main(void)
-{
-	char st[50] = "hey how you doing baby!";
-	char lok[2] = "y";
-	char *res;
-	res = ft_strnstr(st, lok, ft_strlen(st));
-	printf("%s\n", res);
-	return 0;
-}
+// int main(void)
+// {
+// 	char st[50] = "hey how you doing baby!";
+// 	char lok[10] = "h";
+// 	char *res;
+// 	res = ft_strnstr(st, lok, 23);
+// 	printf("%s\n", res);
+// 	return 0;
+// }

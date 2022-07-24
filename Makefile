@@ -26,4 +26,5 @@ $(NAME):$(OBJ)
 exec:
 	./$(OBJ)
 fclean:
-	rm -rf $(OBJ)
+	del $(OBJ)
+# 	rm -rf $(OBJ)   for mac
