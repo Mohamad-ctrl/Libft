@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	char *res;
+	char	*res;
 
 	res = (char *)s;
 	while (*res != c)

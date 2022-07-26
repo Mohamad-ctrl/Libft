@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mosharif <mohamad42acc@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/24 10:34:11 by mosharif          #+#    #+#             */
-/*   Updated: 2022/07/24 10:34:12 by mosharif         ###   ########.fr       */
+/*   Created: 2022/07/25 15:48:25 by mosharif          #+#    #+#             */
+/*   Updated: 2022/07/25 15:48:26 by mosharif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+void	ft_putendl_fd(char *s, int fd)
 {
-	size_t	i;
+	int	x;
 
-	i = 0;
-	if (dstsize == 0)
-		return (ft_strlen(((char *)src)));
-	while (((char *)src)[i] && i < dstsize - 1)
+	x = 0;
+	if (s)
 	{
-		((char *)dst)[i] = ((char *)src)[i];
-		i++;
+		while (s[x] != '\0')
+		{
+			write(fd, &s[x], 1);
+			x++;
+		}
+		write(fd, "\n", 1);
 	}
-	((char *)dst)[i] = '\0';
-	return (ft_strlen(((char *)src)));
 }

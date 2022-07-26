@@ -13,7 +13,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t x;
+	size_t	x;
 
 	x = 0;
 	while (x < len)

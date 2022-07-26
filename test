@@ -233,12 +233,15 @@
 
 // strnstr
 
-// int main(void)
-// {
-// 	char st[50] = "hey how you doing baby!";
-// 	char lok[10] = "h";
-// 	char *res;
-// 	res = ft_strnstr(st, lok, 23);
-// 	printf("%s\n", res);
-// 	return 0;
-// }
+int main(void)
+{
+			char *big = "abcdef";
+			char *little = "abcdefghijklmnop";
+			size_t	max = strlen(big);
+
+			char 	*s1 = strnstr(big, little, max);
+			char 	*s2 = ft_strnstr(big, little, max);
+	printf("%s\n", s1);
+	printf("\n");
+	printf("%s\n", s2);
+}

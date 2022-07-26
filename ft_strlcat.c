@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
+size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
 	size_t	i;
 	size_t	j;
@@ -27,6 +27,6 @@ size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize
 		i++;
 	}
 	if (j < dstsize)
-		((char *)dst )[i] = '\0';
+		((char *)dst)[i] = '\0';
 	return (j + ft_strlen(((char *)src)));
 }
