@@ -105,6 +105,21 @@
 // 	return (0);
 // }
 
+// memchr
+
+// int main(void)
+// {
+// 	char s[] = {0, 1, 2 ,3 ,4 ,5};
+// 	char res;
+// 	char res2;
+// 	res2 = memchr(s, 2 + 256, 3);
+// 	res = ft_memchr(s, 2 + 256, 3);
+// 	printf("%d\n", res);
+// 	printf("%d\n", res2);
+// 	return 0;
+// }
+
+
 // memcpy
 
 // int main(int argc, char **argv)
@@ -133,7 +148,7 @@
 
 // strdup
 
-// int	main(int argc, cha+r **argv)
+// int	main(int argc, char **argv)
 // {
 // 	char	*mine;
 // 	char	*theirs;
@@ -148,14 +163,16 @@
 
 // strchr
 
-// int main()
-// {
-// 	char so[50] = "Hey how are you doing !";
-// 	char *res = ft_strchr(so, '!');
+int main()
+{
+	char s[] = "tripouille";
+	char *res = ft_strchr(s, 'z');
+	char *res2 = strchr(s, 'z');
 
-// 	printf("%s\n", res);
-// 	return 0;
-// }
+	printf("%s\n", res);
+	printf("%s\n", res2);
+	return 0;
+}
 
 
 // memset
@@ -177,39 +194,32 @@
 
 // memmove
 
-int main()
-{
-	char sr[200] = "stop here 2222";
-	char *res;
-	char *res1;
+// int main()
+// {
+// 	char sr[200] = "stop here 2222";
+// 	char *res;
+// 	char *res1;
 
- 	res = ft_memcpy(sr + 4, sr + 8, 8);
- 	res1 = ft_memmove(sr + 4, sr + 8, 8);
- 	// int i = 0;
- 	// while (*res)
- 	// {
- 	// 	printf("%p %d\n", res, i++);
- 	// 	res++;
- 	// }
- 	// i = 0;
- 	// while (*res1)
- 	// {
- 	// 	printf("%p %d\n", res1, i++);
- 	// 	res1++;
- 	// }
-	// res = memmove(sr + 10, sr + 6, 4);
-	// while (*res)
- // 	{
- // 		printf("%p\n", &res1);
- // 		res++;
- // 	}
-	printf("%s \n", res);
-	printf("%s \n", res1);
-	// if (ft_strncmp(res, res, ft_strlen(res)))
-	// 	printf("hello\n");
-	return (0);
-}
-
+//  	res = ft_memcpy(sr + 4, sr + 8, 8);
+//  	res1 = ft_memmove(sr + 4, sr + 8, 8);
+//  	int i = 0;
+//  	while (*res)
+//  	{
+//  		printf("%p %d\n", res, i++);
+//  		res++;
+//  	}
+//  	i = 0;
+//  	while (*res1)
+//  	{
+//  		printf("%p\n", &res1);
+//  		res++;
+//  	}
+// 	printf("%s \n", res);
+// 	printf("%s \n", res1);
+// 	// if (ft_strncmp(res, res, ft_strlen(res)))
+// 	// 	printf("hello\n");
+// 	return (0);
+// }
 // int	main()
 // {
 // 	char	*src = "this is a good nyancat !\r\n";
@@ -235,10 +245,13 @@ int main()
 
 // int main(void)
 // {
-// 	char st[50] = "hey how you doing baby!";
-// 	char lok[10] = "h";
-// 	char *res;
-// 	res = ft_strnstr(st, lok, 23);
-// 	printf("%s\n", res);
-// 	return 0;
+// 			char *big = "abcdef";
+// 			char *little = "abcdefghijklmnop";
+// 			size_t	max = strlen(big);
+
+// 			char 	*s1 = strnstr(big, little, max);
+// 			char 	*s2 = ft_strnstr(big, little, max);
+// 	printf("%s\n", s1);
+// 	printf("\n");
+// 	printf("%s\n", s2);
 // }
