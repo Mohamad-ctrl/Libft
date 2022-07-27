@@ -107,17 +107,17 @@
 
 // memchr
 
-int main(void)
-{
-	char s[] = {0, 1, 2 ,3 ,4 ,5};
-	char res;
-	char res2;
-	res2 = memchr(s, 2 + 256, 3);
-	res = ft_memchr(s, 2 + 256, 3);
-	printf("%d\n", res);
-	printf("%d\n", res2);
-	return 0;
-}
+// int main(void)
+// {
+// 	char s[] = {0, 1, 2 ,3 ,4 ,5};
+// 	char res;
+// 	char res2;
+// 	res2 = memchr(s, 2 + 256, 3);
+// 	res = ft_memchr(s, 2 + 256, 3);
+// 	printf("%d\n", res);
+// 	printf("%d\n", res2);
+// 	return 0;
+// }
 
 
 // memcpy
@@ -148,7 +148,7 @@ int main(void)
 
 // strdup
 
-// int	main(int argc, cha+r **argv)
+// int	main(int argc, char **argv)
 // {
 // 	char	*mine;
 // 	char	*theirs;
@@ -163,14 +163,16 @@ int main(void)
 
 // strchr
 
-// int main()
-// {
-// 	char so[50] = "Hey how are you doing !";
-// 	char *res = ft_strchr(so, '!');
+int main()
+{
+	char s[] = "tripouille";
+	char *res = ft_strchr(s, 'z');
+	char *res2 = strchr(s, 'z');
 
-// 	printf("%s\n", res);
-// 	return 0;
-// }
+	printf("%s\n", res);
+	printf("%s\n", res2);
+	return 0;
+}
 
 
 // memset
