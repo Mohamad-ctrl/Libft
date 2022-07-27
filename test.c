@@ -105,6 +105,21 @@
 // 	return (0);
 // }
 
+// memchr
+
+int main(void)
+{
+	char s[] = {0, 1, 2 ,3 ,4 ,5};
+	char res;
+	char res2;
+	res2 = memchr(s, 2 + 256, 3);
+	res = ft_memchr(s, 2 + 256, 3);
+	printf("%d\n", res);
+	printf("%d\n", res2);
+	return 0;
+}
+
+
 // memcpy
 
 // int main(int argc, char **argv)
