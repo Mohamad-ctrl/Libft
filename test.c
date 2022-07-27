@@ -177,38 +177,38 @@
 
 // memmove
 
-// int main()
-// {
-// 	char sr[200] = "stop here";
-// 	char *res;
-// 	char *res1;
+int main()
+{
+	char sr[200] = "stop here 2222";
+	char *res;
+	char *res1;
 
-//  	res = ft_memmove(sr + 5, sr, 4);
-//  	res1 = memmove(sr + 5, sr, 4);
-//  	int i = 0;
-//  	while (*res)
-//  	{
-//  		printf("%p %d\n", res, i++);
-//  		res++;
-//  	}
-//  	i = 0;
-//  	while (*res1)
-//  	{
-//  		printf("%p %d\n", res1, i++);
-//  		res1++;
-//  	}
-// 	// res = memmove(sr + 10, sr + 6, 4);
-// 	// while (*res)
-//  // 	{
-//  // 		printf("%p\n", &res1);
-//  // 		res++;
-//  // 	}
-// 	printf("%s \n", res);
-// 	printf("%s \n", res1);
-// 	if (ft_strncmp(res, res, ft_strlen(res)))
-// 		printf("hello\n");
-// 	return (0);
-// }
+ 	res = ft_memcpy(sr + 4, sr + 8, 8);
+ 	res1 = ft_memmove(sr + 4, sr + 8, 8);
+ 	// int i = 0;
+ 	// while (*res)
+ 	// {
+ 	// 	printf("%p %d\n", res, i++);
+ 	// 	res++;
+ 	// }
+ 	// i = 0;
+ 	// while (*res1)
+ 	// {
+ 	// 	printf("%p %d\n", res1, i++);
+ 	// 	res1++;
+ 	// }
+	// res = memmove(sr + 10, sr + 6, 4);
+	// while (*res)
+ // 	{
+ // 		printf("%p\n", &res1);
+ // 		res++;
+ // 	}
+	printf("%s \n", res);
+	printf("%s \n", res1);
+	// if (ft_strncmp(res, res, ft_strlen(res)))
+	// 	printf("hello\n");
+	return (0);
+}
 
 // int	main()
 // {
