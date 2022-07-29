@@ -163,16 +163,16 @@
 
 // strchr
 
-int main()
-{
-	char s[] = "tripouille";
-	char *res = ft_strchr(s, 'z');
-	char *res2 = strchr(s, 'z');
+// int main()
+// {
+// 	char s[] = "tripouille";
+// 	char *res = ft_strchr(s, 'z');
+// 	char *res2 = strchr(s, 'z');
 
-	printf("%s\n", res);
-	printf("%s\n", res2);
-	return 0;
-}
+// 	printf("%s\n", res);
+// 	printf("%s\n", res2);
+// 	return 0;
+// }
 
 
 // memset
@@ -262,3 +262,35 @@ int main()
 // 	printf("\n");
 // 	printf("%s\n", s2);
 // }
+
+
+
+// malloc
+
+int main(int argc, char const *argv[])
+{
+	char * ptr ;
+
+	char a[10] = "asdf";
+	ptr =malloc(sizeof(char)* strlen(a));
+	ptr = a;
+
+	printf("%s\n",ptr );
+	free(ptr);
+	printf("%s\n",ptr );
+	printf("%c\n",a[0]);
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
