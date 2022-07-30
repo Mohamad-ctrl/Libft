@@ -55,6 +55,6 @@ char **ft_split(char const *s, char c)
 	if (!sendto)
 		return (NULL);
 	sendto = dosplit(s, c);
-	return (sendto)
+	return (sendto);
 }
 

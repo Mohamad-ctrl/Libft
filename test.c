@@ -340,7 +340,7 @@
 // 	return (split);
 // }
 
-int main(int argc, char const *argv[])
+int main()
 {
 	// char str;
 	// char *res;
