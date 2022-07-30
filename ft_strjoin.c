@@ -13,32 +13,32 @@
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
+	
 	int x;
 	int s1len;
 	int s2len;
 	char *nearray;
-
-	s1len = ft_strlen(s1);
-	s2len = ft_strlen(s2);
-	nwarray = malloc(sizeof(char) * s1len + s2len + 1);
 	if (s1 && s2)
 	{
-	if (nwarray == NULL)
+	s1len = ft_strlen(s1);
+	s2len = ft_strlen(s2);
+	nearray = malloc(sizeof(char) * (s1len + s2len + 1));
+
+	if (nearray == NULL)
 		return (NULL);
 	x = 0;
-	while (s1[x] != NULL)
+	while (s1[x])
 	{
-		nwarray[i] = s1[i];
-		i++;
+		nearray[x] = s1[x];
+		x++;
 	}
-	i = 0;
-	while
+	while (*s2)
 	{
-		nwarray[i] = s2[i];
-		i++;
+		nearray[x] = *s2++;
+		x++;
 	}
-	nwarray[i] = '\0';
-	return (nwarray);
+	nearray[x] = '\0';
+	return (nearray);
 }
 	return (NULL);
 

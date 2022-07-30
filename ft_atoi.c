@@ -28,10 +28,10 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		if (sinal == -1 && (num) * sinal <= LLONG_MIN / 10)
-			return (0);
-		if (num >= LLONG_MAX / 10)
-			return (-1);
+		// if (sinal == -1 && (num) * sinal <= LLONG_MIN / 10)
+		// 	return (0);
+		// if (num >= LLONG_MAX / 10)
+		// 	return (-1);
 		num = (num * 10) + (*str - '0');
 		str++;
 	}
