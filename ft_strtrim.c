@@ -56,12 +56,12 @@
 //     }
 // }
 
-char checkset(char c, char *set)
+char checkset(char c, char const *set)
 {
     int x;
 
     x = 0;
-    while (set[x] != NULL)
+    while (set[x])
     {
         if (set[x] == c)
             return (1);
@@ -72,19 +72,23 @@ char checkset(char c, char *set)
 
 char *ft_strtrim(char const *s1, char const *set)
 {
-    char res;
+    char *res;
     int x;
     int front;
     int back;
 
     front = 0;
-    if (!res)
-        return (NULL);
+    // if (!res)
+    //     return (NULL);
     while (s1[front] && checkset(s1[front], set))
         front++;
-    while (s1[back] && checkset(s1[back], set))
+    back = ft_strlen(s1) - 1;
+    while (back > front && s1[back] && checkset(s1[back], set))
         back--;
-    res = (char *)malloc(sizeof(char) * (front - back + 1));
+        if (back - front < 0)
+            res = (char *)malloc(sizeof(char) * (1));
+        else
+            res = (char *)malloc(sizeof(char) * (back - front + 1));
     x = 0;
     if (!res)
         return (NULL);

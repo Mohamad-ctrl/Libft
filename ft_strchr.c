@@ -13,20 +13,21 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int x;
+	// int x;
 
-	x = 0;
-	if (!s)
-		return (NULL);
-	while (x < c)
-	{
-		// if (res[x] == '\0')
-		// 	return (NULL);
-		if (((char *)s)[x] == (char)c)
-		{
-			return (&((char *)s)[x]);
-		}
-		x++;
-	}
+	// if (!s)
+	// 	return (NULL);
+	// x = 0;
+	// while (s[x])
+	// {
+	// 	if (s[x] == c)
+	// 		return ((char *)s + x);
+	// 	x++;
+	// }
+	// return (NULL);
+	while (*s != '\0' && *s != (unsigned char)c)
+		s++;
+	if (*s == (unsigned char)c)
+		return ((char *)s);
 	return (NULL);
 }
