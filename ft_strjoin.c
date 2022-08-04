@@ -1,39 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mosharif <mohamad42acc@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 14:19:08 by mosharif          #+#    #+#             */
-/*   Updated: 2022/07/12 14:19:10 by mosharif         ###   ########.fr       */
+/*   Created: 2022/07/28 22:10:24 by mosharif          #+#    #+#             */
+/*   Updated: 2022/07/28 22:10:26 by mosharif         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char *ft_strjoin(char const *s1, char const *s2)
 {
-	int	sinal;
-	int	num;
+	
+	int x;
+	int s1len;
+	int s2len;
+	char *nearray;
+	if (s1 && s2)
+	{
+	s1len = ft_strlen(s1);
+	s2len = ft_strlen(s2);
+	nearray = malloc(sizeof(char) * (s1len + s2len + 1));
 
-	sinal = 1;
-	num = 0;
-	while ((*str <= 13 && *str >= 9) || *str == 32)
-		str++;
-	while (*str == '-' || *str == '+')
+	if (nearray == NULL)
+		return (NULL);
+	x = 0;
+	while (s1[x])
 	{
-		if (*str == '-')
-			sinal *= -1;
-		str++;
+		nearray[x] = s1[x];
+		x++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (*s2)
 	{
-		// if (sinal == -1 && (num) * sinal <= LLONG_MIN / 10)
-		// 	return (0);
-		// if (num >= LLONG_MAX / 10)
-		// 	return (-1);
-		num = (num * 10) + (*str - '0');
-		str++;
+		nearray[x] = *s2++;
+		x++;
 	}
-	return (num * sinal);
+	nearray[x] = '\0';
+	return (nearray);
+}
+	return (NULL);
+
 }
