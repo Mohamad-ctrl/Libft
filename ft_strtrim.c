@@ -11,93 +11,18 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-// char checkset(char *str, char *set)
-// {
-//     int x;
-//     int y;
-
-//     x = 0;
-//     y = 0;
-//     while (str[x] != NULL && set[y] != NULL)
-//     {
-//         if (str[x] == set[y])
-//             return ("match");
-//         else
-//             return (0);
-//         x++;
-//         y++;
-//     }
-//     return (1);
-// }
-
-// char *ft_strtrim(char const *s1, char const *set)
-// {
-//     char res;
-//     int last;
-//     int x;
-//     int y;
-
-//     x = 0;
-//     y = 0;
-//     next = 1;
-//     res = malloc(sizeof(char) * ft_strlen(s1));
-//     if (!res)
-//         return (NULL);
-//     while (s1[x] != NULL && set[y])
-//     {
-//         if (checkset(s1[x], set[y]) == "match")
-//         {
-//             while (checkset(s1[x + next], set[y]) == "match")
-//                 next++;
-//         }
-
-//         x++;
-//         y++;
-//     }
-// }
-
-char checkset(char c, char const *set)
+char    *ft_strtrim(char const *s1, char const *set)
 {
-    int x;
+    size_t      size_s;
+    char        *newstring;
 
-    x = 0;
-    while (set[x])
-    {
-        if (set[x] == c)
-            return (1);
-        x++;
-    }
-    return (0);
-}
-
-char *ft_strtrim(char const *s1, char const *set)
-{
-    char *res;
-    int x;
-    int front;
-    int back;
-
-    front = 0;
-    // if (!res)
-    //     return (NULL);
-    while (s1[front] && checkset(s1[front], set))
-        front++;
-    back = ft_strlen(s1) - 1;
-    while (back > front && s1[back] && checkset(s1[back], set))
-        back--;
-        if (back - front < 0)
-            res = (char *)malloc(sizeof(char) * (1));
-        else
-            res = (char *)malloc(sizeof(char) * (back - front + 1));
-    x = 0;
-    if (!res)
+    if (!s1 || !set)
         return (NULL);
-    while (front < back)
-    {
-        res[x] = s1[front];
-        x++;
-        front++;
-    }
-    res[x] = '\0';
-    return (res);   
+    while (*s1 && ft_strchr(set, *s1))
+        s1++;
+    size_s = ft_strlen(s1);
+    while (size_s && ft_strchr(set, s1[size_s]))
+        size_s--;
+    newstring = ft_substr((char*)s1, 0, size_s + 1);
+    return (newstring);
 }
