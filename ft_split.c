@@ -58,3 +58,25 @@ char **ft_split(char const *s, char c)
 	return (sendto);
 }
 
+int main()
+{
+	// char str;
+	// char *res;
+
+	// str = "z";
+	// res = ft_split("This is a test script that will be cut from here z this is the second half", str);
+	// printf("%s\n", res);
+	// return 0;
+	char	**tab;
+	unsigned int	i;
+
+	i = 0;
+	tab = ft_split("This is a test script that will be cut from here zzzzzzzz this is the second half", 'z');
+	if (!tab[0])
+		ft_putendl_fd("ok\n", 1);
+	while (tab[i] != NULL)
+	{
+		ft_putendl_fd(tab[i], 1);
+		i++;
+	}
+}

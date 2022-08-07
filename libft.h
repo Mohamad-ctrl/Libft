@@ -19,6 +19,12 @@
 # include <unistd.h>
 # include <limits.h>
 
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
+
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
@@ -51,5 +57,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_strjoin(char const *s1, char const *s2);
 char **ft_split(char const *s, char c);
 char *ft_strtrim(char const *s1, char const *set);
+t_list *ft_lstnew(void *content);
+void ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
