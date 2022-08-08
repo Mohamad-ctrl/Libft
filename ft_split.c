@@ -27,10 +27,9 @@ char dosplit(char const *str, char sp)
 	z = 0;
 	while (str[i])
 	{
-		if (str[i] == sp)
-			array2[y] = str[i];
-		else
+		if(!str[x] != sp)
 			array1[x] = str[i];
+		i++;
 	}
 	res = (char)malloc(sizeof(char) * (ft_strlen(array1) + ft_strlen(array2)) + 1);
 	if (!res)
