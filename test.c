@@ -45,7 +45,7 @@
 // int main(int argc, char **argv)
 // {
 // 	int array[3][4] = {{1, 2, 3, 4, 5}, {10, 20, 30, 40, 50}, {100, 200, 300,
-		// 400, 500}, {1000, 2000, 3000, 4000, 5000}};
+// 400, 500}, {1000, 2000, 3000, 4000, 5000}};
 // 	printf("%d\n", &array[0][2]);
 // }
 
@@ -83,7 +83,7 @@
 // 	printf("My Atoi :%d:", ft_atoi(av[1]));
 // 	printf("\n");
 // 	printf("Real Atoi :%d:", atoi(av[1]));
-// 	return 0;
+// 	return (0);
 // }
 
 // int game(int gu)
@@ -116,9 +116,8 @@
 // 	res = ft_memchr(s, 2 + 256, 3);
 // 	printf("%d\n", res);
 // 	printf("%d\n", res2);
-// 	return 0;
+// 	return (0);
 // }
-
 
 // memcpy
 
@@ -171,26 +170,24 @@
 
 // 	printf("%s\n", res);
 // 	printf("%s\n", res2);
-// 	return 0;
+// 	return (0);
 // }
 
-
 // memset
-
 
 // int main(void)
 // {
 // 	// char array[10] = "aaaaaaaaaa";
 // 	char array[10]; // We can fill an emty memory or we can replace it memory
 // 	// ft_memset(array, 'c', ft_strlen(array));
-// 	 ft_memset(array, 'c', sizeof(char) * 10); // If you go above the max size it will fill the whole memory with no errors
+// 		ft_memset(array, 'c', sizeof(char) * 10);
+// If you go above the max size it will fill the whole memory with no errors
 
 // 	for (int i = 0; i < 10; ++i)
 // 		printf("[%c]", array[i]);
 // 	printf("\n");
-// 	return 0;
+// 	return (0);
 // }
-
 
 // memmove
 
@@ -220,7 +217,7 @@
 // 	// 	printf("hello\n");
 // 	return (0);
 // }
-// int	main()
+// int	main(void)
 // {
 // 	char	*src = "this is a good nyancat !\r\n";
 // 	char	dst1[0xF0];
@@ -240,7 +237,6 @@
 // 	}
 // }
 
-
 // strnstr
 
 // int main(void)
@@ -255,8 +251,6 @@
 // 	printf("\n");
 // 	printf("%s\n", s2);
 // }
-
-
 
 // malloc
 
@@ -273,7 +267,7 @@
 // 	printf("%s\n",ptr );
 // 	printf("%c\n",a[0]);
 
-// 	return 0;
+// 	return (0);
 // }
 
 // ft_split
@@ -284,43 +278,36 @@
 // 	// char *res;
 
 // 	// str = "z";
-// 	// res = ft_split("This is a test script that will be cut from here z this is the second half", str);
-// 	// printf("%s\n", res);
-// 	// return 0;
-// 	char	**tab;
-// 	unsigned int	i;
+// 	// res = ft_split("This is a test script that will be cut from here z this is the second half",
+			str);
+			// 	// printf("%s\n", res);
+			// 	// return (0);
+			// 	char	**tab;
+			// 	unsigned int	i;
 
-// 	i = 0;
-// 	tab = ft_split("This is a test script that will be cut from here zzzzzzzz this is the second half", 'z');
-// 	if (!tab[0])
-// 		ft_putendl_fd("ok\n", 1);
-// 	while (tab[i] != NULL)
-// 	{
-// 		ft_putendl_fd(tab[i], 1);
-// 		i++;
-// 	}
-// }
+			// 	i = 0;
+			// 	tab = ft_split("This is a test script that will be cut from here zzzzzzzz this is the second half",
+			'z');
+			// 	if (!tab[0])
+			// 		ft_putendl_fd("ok\n", 1);
+			// 	while (tab[i] != NULL)
+			// 	{
+			// 		ft_putendl_fd(tab[i], 1);
+			// 		i++;
+			// 	}
+			// }
 
+			// strtrim
 
-// strtrim
+			int main(void)
+			{
+				char *set;
+				char *str;
+				char *res;
 
-int main(void)
-{
-	char *set;
-	char *str;
-	char *res;
-	set = "o";
-	str = "ohello allo";
-	res = ft_strtrim(str, set);
-	printf("%s\n", res);
-
-	return 0;
-}
-
-
-
-
-
-
-
-
+				set = "o";
+				str = "ohello allo";
+				res = ft_strtrim(str, set);
+				printf("%s\n", res);
+				return (0);
+			}

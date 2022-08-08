@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *res;
-	int x;
+	char	*res;
+	int		x;
 
 	if (!s)
 		return (NULL);
@@ -29,6 +29,4 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	res[x] = '\0';
 	return (res);
-
 }
-

@@ -11,15 +11,15 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char dosplit(char const *str, char sp)
+char	dosplit(char const *str, char sp)
 {
-	int x;
-	int y;
-	int i;
-	int z;
-	char *array2;
-	char *array1;
-	char *res;
+	int		x;
+	int		y;
+	int		i;
+	int		z;
+	char	*array2;
+	char	*array1;
+	char	*res;
 
 	x = 0;
 	y = 0;
@@ -27,11 +27,12 @@ char dosplit(char const *str, char sp)
 	z = 0;
 	while (str[i])
 	{
-		if(!str[x] != sp)
+		if (!str[x] != sp)
 			array1[x] = str[i];
 		i++;
 	}
-	res = (char)malloc(sizeof(char) * (ft_strlen(array1) + ft_strlen(array2)) + 1);
+	res = (char)malloc(sizeof(char) * (ft_strlen(array1) + ft_strlen(array2))
+			+ 1);
 	if (!res)
 		return (NULL);
 	while (array1[x])
@@ -42,11 +43,11 @@ char dosplit(char const *str, char sp)
 	return (res);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	int x;
-	int y;
-	char *sendto;
+	int		x;
+	int		y;
+	char	*sendto;
 
 	x = 0;
 	y = 0;
@@ -57,25 +58,26 @@ char **ft_split(char const *s, char c)
 	return (sendto);
 }
 
-int main()
+int	main(void)
 {
-	// char str;
-	// char *res;
-
-	// str = "z";
-	// res = ft_split("This is a test script that will be cut from here z this is the second half", str);
-	// printf("%s\n", res);
-	// return 0;
-	char	**tab;
+	char			**tab;
 	unsigned int	i;
 
-	i = 0;
-	tab = ft_split("This is a test script that will be cut from here zzzzzzzz this is the second half", 'z');
-	if (!tab[0])
-		ft_putendl_fd("ok\n", 1);
-	while (tab[i] != NULL)
-	{
-		ft_putendl_fd(tab[i], 1);
-		i++;
-	}
+	// char str;
+	// char *res;
+	// str = "z";
+	// res = ft_split("This is a test script that will be cut from here z this is the second half",
+			str);
+			// printf("%s\n", res);
+			// return (0);
+			i = 0;
+			tab = ft_split("This is a test script that will be cut from here zzzzzzzz this is the second half",
+							'z');
+			if (!tab[0])
+				ft_putendl_fd("ok\n", 1);
+			while (tab[i] != NULL)
+			{
+				ft_putendl_fd(tab[i], 1);
+				i++;
+			}
 }

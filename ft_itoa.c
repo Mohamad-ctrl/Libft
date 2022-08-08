@@ -11,60 +11,53 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int lencount(int x)
+int	lencount(long x)
 {
-    size_t i;
+	size_t	i;
 
-    if (x == 0)
-        return (1);
-    i = 0;
-    if (x < 0)
-        i++;
-    while (x)
-    {
-        x /= 10;
-        i++;
-    }
-    return(i);
+	if (x == 0)
+		return (1);
+	i = 0;
+	if (x < 0)
+		i++;
+	while (x)
+	{
+		x /= 10;
+		i++;
+	}
+	return (i);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    int len;
-    int i;
-    char *res;
-
-    len = lencount(n);
-    res = (char *)malloc(len + 1);
-    if (!res)
-        return (NULL);
-    res[len + 1] = '\0';
-    if (n < 0)
-    {
-        res[0] = '-';
-        n *= -1;
-        i = 1;
-    }
-    else
-        i = 0;
-    if (n == 0)
-        res[len] = '0';
-    while (len > i)
-    {
-        if (n > 0)
-        {
-            res[len] = '0' + n % 10;
-            n = n/ 10;
-        }
-        len--;
-    }
-        return (res);
+	nb = n;
+	len = lencount(nb);
+	res = (char *)malloc(sizeof(char) * len + 1);
+	if (!res)
+		return (NULL);
+	if (nb == 0)
+		res[0] = '0';
+	if (nb < 0)
+	{
+		res[0] = '-';
+		nb *= -1;
+	}
+	res[len] = '\0';
+	while (len--)
+	{
+		if (nb > 0)
+		{
+			res[len] = '0' + nb % 10;
+			nb = nb / 10;
+		}
+	}
+	return (res);
 }
 
-// int main(int argc, char const *argv[])
-// {
-//     ft_itoa(42);
-
-//     return 0;
-// }
-
+int	main(int argc, char const *argv[])
+{
+	printf("%s\n", ft_itoa(-623));
+	printf("%s\n", ft_itoa(INT_MIN));
+	printf("%s\n", ft_itoa(-0));
+	return (0);
+}
