@@ -59,5 +59,7 @@ char **ft_split(char const *s, char c);
 char *ft_strtrim(char const *s1, char const *set);
 t_list *ft_lstnew(void *content);
 void ft_lstadd_front(t_list **lst, t_list *new);
+t_list *ft_lstlast(t_list *lst);
+int		ft_lstsize(t_list *lst);
 
 #endif

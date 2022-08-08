@@ -35,10 +35,13 @@ char *ft_itoa(int n)
     char *res;
 
     len = lencount(n);
-    res = (char)malloc(len + 1);
+    res = (char *)malloc(len + 1);
+    i = 0;
     if (!res)
         return (NULL);
-    res[len] = '\0';
+    while (res[i] < len + 1)
+        i++;
+    res[i] = '\0';
     if (n < 0)
     {
         res[0] = '-';
@@ -46,7 +49,8 @@ char *ft_itoa(int n)
     }
     else
         i = 0;
-    while (len-- > 1)
+    while (len > 1)
+    {
         if (n < 0)
         {
             res[len] = '0' + n % 10;
@@ -57,6 +61,15 @@ char *ft_itoa(int n)
             res[len] = '0' + n % 10;
             n = n / 10;
         }
+        len--;
+    }
         return (res);
 }
+
+// int main(int argc, char const *argv[])
+// {
+//     ft_itoa(42);
+
+//     return 0;
+// }
 
