@@ -13,8 +13,8 @@
 
 int	ft_atoi(const char *str)
 {
-	long	num;
-	long	sinal;
+	int	num;
+	int sinal;
 
 	sinal = 1;
 	num = 0;
@@ -29,8 +29,8 @@ int	ft_atoi(const char *str)
 		num = (num * 10) + (*str - '0');
 		if (num < -2147483648)
 			return (0);
-		// else if (num > 2147483647)
-		// 	return (-1);
+		else if (num > 2147483647)
+			return (-1);
 		str++;
 	}
 	return (num * sinal);
