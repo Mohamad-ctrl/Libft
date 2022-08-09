@@ -32,7 +32,7 @@ static int	counter(const char *str, char c)
 	return (x);
 }
 
-static char	*dup(const char *str, int start, int finish)
+static char	*word_dup(const char *str, int start, int finish)
 {
 	char	*word;
 	int		i;
@@ -63,11 +63,11 @@ char		**ft_split(char const *s, char c)
 			i = x;
 		else if ((s[x] == c || x == ft_strlen(s)) && i >= 0)
 		{
-			split[y++] = dup(s, i, x);
+			split[y++] = word_dup(s, i, x);
 			i = -1;
 		}
 		x++;
 	}
-	split[y] = '\0';
+	split[y] = 0;
 	return (split);
 }

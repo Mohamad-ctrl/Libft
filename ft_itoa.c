@@ -30,6 +30,10 @@ int	lencount(long x)
 
 char	*ft_itoa(int n)
 {
+    long nb;
+    long len;
+    char *res;
+    
 	nb = n;
 	len = lencount(nb);
 	res = (char *)malloc(sizeof(char) * len + 1);
@@ -54,10 +58,10 @@ char	*ft_itoa(int n)
 	return (res);
 }
 
-int	main(int argc, char const *argv[])
-{
-	printf("%s\n", ft_itoa(-623));
-	printf("%s\n", ft_itoa(INT_MIN));
-	printf("%s\n", ft_itoa(-0));
-	return (0);
-}
+// int	main(int argc, char const *argv[])
+// {
+// 	printf("%s\n", ft_itoa(-623));
+// 	printf("%s\n", ft_itoa(INT_MIN));
+// 	printf("%s\n", ft_itoa(-0));
+// 	return (0);
+// }
