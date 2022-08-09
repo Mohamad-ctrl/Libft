@@ -11,73 +11,63 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char	dosplit(char const *str, char sp)
+static int	counter(const char *str, char c)
 {
-	int		x;
-	int		y;
-	int		i;
-	int		z;
-	char	*array2;
-	char	*array1;
-	char	*res;
+	int x;
+	int triger;
 
 	x = 0;
-	y = 0;
-	i = 0;
-	z = 0;
-	while (str[i])
+	triger = 0;
+	while (*str)
 	{
-		if (!str[x] != sp)
-			array1[x] = str[i];
-		i++;
+		if (*str != c && triger == 0)
+		{
+			triger = 1;
+			x++;
+		}
+		else if (*str == c)
+			triger = 0;
+		str++;
 	}
-	res = (char)malloc(sizeof(char) * (ft_strlen(array1) + ft_strlen(array2))
-			+ 1);
-	if (!res)
-		return (NULL);
-	while (array1[x])
-		res[z++] = array1[x++];
-	while (array2[y])
-		res[z++] = array2[y++];
-	res[z] = '\0';
-	return (res);
+	return (x);
 }
 
-char	**ft_split(char const *s, char c)
+static char	*dup(const char *str, int start, int finish)
 {
-	int		x;
-	int		y;
-	char	*sendto;
+	char	*word;
+	int		i;
 
+	i = 0;
+	word = malloc((finish - start + 1) * sizeof(char));
+	while (start < finish)
+		word[i++] = str[start++];
+	word[i] = '\0';
+	return (word);
+}
+
+char		**ft_split(char const *s, char c)
+{
+	size_t	x; // for s
+	size_t	y; // for split
+	int		i; // the index
+	char	**split;
+
+	if (!s || !(split = malloc((counter(s, c) + 1) * sizeof(char *))))
+		return (0);
 	x = 0;
 	y = 0;
-	sendto = (char)malloc(sizeof(char) * ft_strlen(s) + 1);
-	if (!sendto)
-		return (NULL);
-	sendto = dosplit(s, c);
-	return (sendto);
-}
-
-int	main(void)
-{
-	char			**tab;
-	unsigned int	i;
-
-	// char str;
-	// char *res;
-	// str = "z";
-	// res = ft_split("This is a test script that will be cut from here z this is the second half",
-			str);
-			// printf("%s\n", res);
-			// return (0);
-			i = 0;
-			tab = ft_split("This is a test script that will be cut from here zzzzzzzz this is the second half",
-							'z');
-			if (!tab[0])
-				ft_putendl_fd("ok\n", 1);
-			while (tab[i] != NULL)
-			{
-				ft_putendl_fd(tab[i], 1);
-				i++;
-			}
+	i = -1;
+	while (x <= ft_strlen(s))
+	{
+		if (s[x] != c && i < 0)
+			i = x;
+		else if ((s[x] == c || x == ft_strlen(s)) && i >= 0)
+		{
+			split[y++] = dup(s, i, x);
+			i = -1;
+		}
+		x++;
+	}
+	split[y] = '\0';
+	return (split);
 }

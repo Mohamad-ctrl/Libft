@@ -13,27 +13,32 @@
 
 int	ft_atoi(const char *str)
 {
-	int	sinal;
-	int	num;
+	long	num;
+	long	sinal;
 
 	sinal = 1;
 	num = 0;
 	while ((*str <= 13 && *str >= 9) || *str == 32)
 		str++;
+	if (*str == '-')
+		sinal *= -1;
 	while (*str == '-' || *str == '+')
-	{
-		if (*str == '-')
-			sinal *= -1;
 		str++;
-	}
 	while (*str >= '0' && *str <= '9')
 	{
-		// if (sinal == -1 && (num) * sinal <= LLONG_MIN / 10)
-		// 	return (0);
-		// if (num >= LLONG_MAX / 10)
-		// 	return (-1);
 		num = (num * 10) + (*str - '0');
+		if (num > 2147483647)
+			return (-1);
+		if (num < -2147483648)
+			return (0);
 		str++;
 	}
 	return (num * sinal);
 }
+
+// int main(void)
+// {
+// 	printf("%d\n", ft_atoi("-3890476589053766037405673408765083476908374"));
+// 	printf("%d\n", atoi("-3890476589053766037405673408765083476908374"));
+// 	return 0;
+// }
