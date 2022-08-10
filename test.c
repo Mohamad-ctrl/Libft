@@ -193,24 +193,24 @@
 
 // int main()
 // {
-// 	char sr[200] = "stop here 2222";
+// 	char sr[200] = "Hello baby girl how are you doing, I missed you baby";
 // 	char *res;
 // 	char *res1;
 
 //  	res = ft_memcpy(sr + 4, sr + 8, 8);
 //  	res1 = ft_memmove(sr + 4, sr + 8, 8);
-//  	int i = 0;
-//  	while (*res)
-//  	{
-//  		printf("%p %d\n", res, i++);
-//  		res++;
-//  	}
-//  	i = 0;
-//  	while (*res1)
-//  	{
-//  		printf("%p\n", &res1);
-//  		res++;
-//  	}
+//  	// int i = 0;
+//  	// while (*res)
+//  	// {
+//  	// 	printf("%p %d\n", res, i++);
+//  	// 	res++;
+//  	// }
+//  	// i = 0;
+//  	// while (*res1)
+//  	// {
+//  	// 	printf("%p\n", &res1);
+//  	// 	res++;
+//  	// }
 // 	printf("%s \n", res);
 // 	printf("%s \n", res1);
 // 	// if (ft_strncmp(res, res, ft_strlen(res)))
@@ -279,7 +279,7 @@
 
 // 	// str = "z";
 // 	// res = ft_split("This is a test script that will be cut from here z this is the second half",
-			str);
+			//str);
 			// 	// printf("%s\n", res);
 			// 	// return (0);
 			// 	char	**tab;
@@ -287,7 +287,7 @@
 
 			// 	i = 0;
 			// 	tab = ft_split("This is a test script that will be cut from here zzzzzzzz this is the second half",
-			'z');
+			//'z');
 			// 	if (!tab[0])
 			// 		ft_putendl_fd("ok\n", 1);
 			// 	while (tab[i] != NULL)
@@ -299,15 +299,16 @@
 
 			// strtrim
 
-			int main(void)
-			{
-				char *set;
-				char *str;
-				char *res;
+			// int main(void)
+			// {
+			// 	char *set;
+			// 	char *str;
+			// 	char *res;
 
-				set = "o";
-				str = "ohello allo";
-				res = ft_strtrim(str, set);
-				printf("%s\n", res);
-				return (0);
-			}
+			// 	set = "o";
+			// 	str = "ohello allo";
+			// 	res = ft_strtrim(str, set);
+			// 	printf("%s\n", res);
+			// 	return (0);
+			// }
+

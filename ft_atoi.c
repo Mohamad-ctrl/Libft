@@ -13,32 +13,44 @@
 
 int	ft_atoi(const char *str)
 {
-	int	num;
-	int sinal;
+	long	num;
+	long sn;
 
-	sinal = 1;
+	sn = 1;
 	num = 0;
-	while ((*str <= 13 && *str >= 9) || *str == 32)
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
 		str++;
 	if (*str == '-')
-		sinal *= -1;
-	while (*str == '-' || *str == '+')
+		sn = -1;
+	if ((*str == '-') || (*str == '+'))
 		str++;
-	while (*str >= '0' && *str <= '9')
+	while ((*str != '\0') && ('0' <= *str) && (*str <= '9'))
 	{
 		num = (num * 10) + (*str - '0');
-		if (num < -2147483648)
-			return (0);
-		else if (num > 2147483647)
+		if (num > 2147483647 && sn == 1)
 			return (-1);
+		else if (num < -2147483648 && sn == -1)
+			return (0);
 		str++;
 	}
-	return (num * sinal);
+	printf("%d\n", sn);
+	return (num * sn);
 }
 
 // int main(void)
 // {
-// 	printf("%d\n", ft_atoi("-3890476589053766037405673408765083476908374"));
-// 	printf("%d\n", atoi("-3890476589053766037405673408765083476908374"));
+// 	int res1;
+// 	int res2;
+// 	char	n[15] = "+-42";
+
+// 	res1 = ft_atoi(n);
+// 	res2 = atoi(n);
+
+// 	if (res1 == res2)
+// 		printf("Passed the test\n");
+// 	else
+// 		printf("faild the test\n");
+// 	printf("%d\n", res1);
+// 	printf("%d\n", res2);
 // 	return 0;
 // }
