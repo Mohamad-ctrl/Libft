@@ -28,14 +28,6 @@ int	lencount(long x)
 	return (i);
 }
 
-// void opp(int nb, int len)
-// {
-// 	if (nb > 0)
-// 		{
-// 			res[len] = '0' + nb % 10;
-// 			nb = nb / 10;
-// 		}
-// }
 char	*ft_itoa(int n)
 {
 	long	nb;
@@ -55,13 +47,11 @@ char	*ft_itoa(int n)
 		nb *= -1;
 	}
 	res[len] = '\0';
-	while (len--)
+	while (nb > 0)
 	{
-		if (nb > 0)
-		{
 			res[len] = '0' + nb % 10;
 			nb = nb / 10;
-		}
+			len--;
 	}
 	return (res);
 }

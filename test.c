@@ -280,35 +280,91 @@
 
 // 	// str = "z";
 // 	// res = ft_split("This is a test script that will be cut from here z this is the second half",
-			//str);
-			// 	// printf("%s\n", res);
-			// 	// return (0);
-			// 	char	**tab;
-			// 	unsigned int	i;
+// str);
+// 	// printf("%s\n", res);
+// 	// return (0);
+// 	char	**tab;
+// 	unsigned int	i;
 
-			// 	i = 0;
-			// 	tab = ft_split("This is a test script that will be cut from here zzzzzzzz this is the second half",
-			//'z');
-			// 	if (!tab[0])
-			// 		ft_putendl_fd("ok\n", 1);
-			// 	while (tab[i] != NULL)
-			// 	{
-			// 		ft_putendl_fd(tab[i], 1);
-			// 		i++;
-			// 	}
-			// }
+// 	i = 0;
+// 	tab = ft_split("This is a test script that will be cut from here zzzzzzzz this is the second half",
+//'z');
+// 	if (!tab[0])
+// 		ft_putendl_fd("ok\n", 1);
+// 	while (tab[i] != NULL)
+// 	{
+// 		ft_putendl_fd(tab[i], 1);
+// 		i++;
+// 	}
+// }
 
-			// strtrim
+// strtrim
 
-			// int main(void)
-			// {
-			// 	char *set;
-			// 	char *str;
-			// 	char *res;
+// int main(void)
+// {
+// 	char *set;
+// 	char *str;
+// 	char *res;
 
-			// 	set = "o";
-			// 	str = "ohello allo";
-			// 	res = ft_strtrim(str, set);
-			// 	printf("%s\n", res);
-			// 	return (0);
-			// }
+// 	set = "o";
+// 	str = "ohello allo";
+// 	res = ft_strtrim(str, set);
+// 	printf("%s\n", res);
+// 	return (0);
+// }
+
+//////////////////////////////////////////////////////////////////
+////							itoa						  ////
+//////////////////////////////////////////////////////////////////
+
+// int	ft_len(long n)
+// {
+// 	int	len;
+
+// 	len = 0;
+// 	if (n < 0)
+// 	{
+// 		n *= -1;
+// 		len++;
+// 	}
+// 	while (n > 0)
+// 	{
+// 		n = n / 10;
+// 		len++;
+// 	}
+// 	return (len);
+// }
+
+// char	*ft_itoa(int n)
+// {
+// 	char	*str;
+// 	long	nb;
+// 	int		i;
+
+// 	nb = n;
+// 	if (nb == 0)
+// 		return (ft_strdup("0"));
+// 	i = ft_len(nb);
+// 	str = (char *)malloc(sizeof(char) * (i + 1));
+// 	if (!str)
+// 		return (NULL);
+// 	str[i--] = '\0';
+// 	if (nb < 0)
+// 	{
+// 		str[0] = '-';
+// 		nb *= -1;
+// 	}
+// 	while (nb > 0)
+// 	{
+// 		str[i] = '0' + (nb % 10);
+// 		nb = nb / 10;
+// 		i--;
+// 	}
+// 	return (str);
+// }
+
+/////////////////////////////////////////////////////////////////////////////
+/////*******************************************************************/////
+/////*******************************************************************/////
+/////*******************************************************************/////
+/////////////////////////////////////////////////////////////////////////////
