@@ -13,17 +13,6 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	// int x;
-	// if (!s)
-	// 	return (NULL);
-	// x = 0;
-	// while (s[x])
-	// {
-	// 	if (s[x] == c)
-	// 		return ((char *)s + x);
-	// 	x++;
-	// }
-	// return (NULL);
 	while (*s != '\0' && *s != (unsigned char)c)
 		s++;
 	if (*s == (unsigned char)c)

@@ -11,9 +11,9 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list nxt;
+	t_list	*nxt;
 
 	if (lst == NULL)
 		return ;
@@ -21,6 +21,6 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
 	{
 		nxt = lst;
 		f(nxt->content);
-		nxt = nxt->next;
+		lst = nxt->next;
 	}
 }

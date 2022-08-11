@@ -14,7 +14,7 @@
 int	ft_atoi(const char *str)
 {
 	long	num;
-	long sn;
+	long	sn;
 
 	sn = 1;
 	num = 0;
@@ -33,7 +33,6 @@ int	ft_atoi(const char *str)
 			return (0);
 		str++;
 	}
-	printf("%d\n", sn);
 	return (num * sn);
 }
 
@@ -52,5 +51,5 @@ int	ft_atoi(const char *str)
 // 		printf("faild the test\n");
 // 	printf("%d\n", res1);
 // 	printf("%d\n", res2);
-// 	return 0;
+// 	return (0);
 // }

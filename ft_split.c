@@ -13,8 +13,8 @@
 
 static int	counter(const char *str, char c)
 {
-	int x;
-	int triger;
+	int	x;
+	int	triger;
 
 	x = 0;
 	triger = 0;
@@ -45,14 +45,15 @@ static char	*word_dup(const char *str, int start, int finish)
 	return (word);
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	size_t	x; // for s
-	size_t	y; // for split
-	int		i; // the index
+	size_t	x;
+	size_t	y;
+	int		i;
 	char	**split;
 
-	if (!s || !(split = malloc((counter(s, c) + 1) * sizeof(char *))))
+	split = malloc((counter(s, c) + 1) * sizeof(char *));
+	if (!s || !split)
 		return (0);
 	x = 0;
 	y = 0;

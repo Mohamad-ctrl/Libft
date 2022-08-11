@@ -28,12 +28,20 @@ int	lencount(long x)
 	return (i);
 }
 
+// void opp(int nb, int len)
+// {
+// 	if (nb > 0)
+// 		{
+// 			res[len] = '0' + nb % 10;
+// 			nb = nb / 10;
+// 		}
+// }
 char	*ft_itoa(int n)
 {
-    long nb;
-    long len;
-    char *res;
-    
+	long	nb;
+	long	len;
+	char	*res;
+
 	nb = n;
 	len = lencount(nb);
 	res = (char *)malloc(sizeof(char) * len + 1);
@@ -57,11 +65,3 @@ char	*ft_itoa(int n)
 	}
 	return (res);
 }
-
-// int	main(int argc, char const *argv[])
-// {
-// 	printf("%s\n", ft_itoa(-623));
-// 	printf("%s\n", ft_itoa(INT_MIN));
-// 	printf("%s\n", ft_itoa(-0));
-// 	return (0);
-// }
