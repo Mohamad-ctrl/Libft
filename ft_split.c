@@ -52,9 +52,11 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	char	**split;
 
+	if (!s)
+		return (NULL);
 	split = malloc((counter(s, c) + 1) * sizeof(char *));
-	if (!s || !split)
-		return (0);
+	if (!split)
+		return (NULL);
 	x = 0;
 	y = 0;
 	i = -1;
