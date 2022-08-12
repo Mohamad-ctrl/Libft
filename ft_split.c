@@ -45,15 +45,12 @@ static char	*word_dup(const char *str, int start, int finish)
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_subsplit(char const *s, char c, char **split)
 {
 	size_t	x;
 	size_t	y;
 	int		i;
-	char	**split;
-
-	if (!s)
-		return (NULL);
+	
 	split = malloc((counter(s, c) + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
@@ -74,3 +71,15 @@ char	**ft_split(char const *s, char c)
 	split[y] = 0;
 	return (split);
 }
+char **ft_split(char const *s, char c)
+{
+	char **mem;
+	
+	mem = NULL;
+	if (!s)
+		return (NULL);
+	return (ft_subsplit(str, c, mem));
+		
+}
+
+
