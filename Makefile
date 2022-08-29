@@ -27,4 +27,4 @@ clean:
 	rm -rf *.o
 fclean:
 	rm -rf $(OBJ) $(NAME) $(bonus-obj)
-re:	fclean all
+re:	clean all

@@ -50,7 +50,7 @@ char	**ft_subsplit(char const *s, char c, char **split)
 	size_t	x;
 	size_t	y;
 	int		i;
-	
+
 	split = malloc((counter(s, c) + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
@@ -71,15 +71,13 @@ char	**ft_subsplit(char const *s, char c, char **split)
 	split[y] = 0;
 	return (split);
 }
-char **ft_split(char const *s, char c)
+
+char	**ft_split(char const *s, char c)
 {
-	char **mem;
-	
+	char	**mem;
+
 	mem = NULL;
 	if (!s)
 		return (NULL);
-	return (ft_subsplit(str, c, mem));
-		
+	return (ft_subsplit(s, c, mem));
 }
-
-

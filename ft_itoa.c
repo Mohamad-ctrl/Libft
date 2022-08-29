@@ -49,9 +49,9 @@ char	*ft_itoa(int n)
 	}
 	while (nb > 0)
 	{
-			res[len] = '0' + (nb % 10);
-			nb = nb / 10;
-			len--;
+		res[len] = '0' + (nb % 10);
+		nb = nb / 10;
+		len--;
 	}
 	return (res);
 }
