@@ -11,30 +11,56 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int ft_atoi(char *str)
 {
-	long	num;
-	long	sn;
+    int i;
+    int sign;
+    int res;
 
-	sn = 1;
-	num = 0;
-	while (*str == ' ' || (*str >= 9 && *str <= 13))
-		str++;
-	if (*str == '-')
-		sn = -1;
-	if ((*str == '-') || (*str == '+'))
-		str++;
-	while ((*str != '\0') && ('0' <= *str) && (*str <= '9'))
-	{
-		num = (num * 10) + (*str - '0');
-		if (num > 2147483647 && sn == 1)
-			return (-1);
-		else if (num < -2147483648 && sn == -1)
-			return (0);
-		str++;
-	}
-	return (num * sn);
+    i = 0;
+    sign = 1;
+    res = 0;
+    while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+        i++;
+    if (str[i] == '-')
+    {
+        sign = -1;
+        i++;
+    }
+    else if (str[i] == '+')
+        i++;
+    while (str[i] >= '0' && str[i] <= '9')
+    {
+        res = res * 10 + str[i] - '0';
+        i++;
+    }
+    return (res * sign);
 }
+
+// int	ft_atoi(const char *str)
+// {
+// 	long	num;
+// 	long	sn;
+
+// 	sn = 1;
+// 	num = 0;
+// 	while (*str == ' ' || (*str >= 9 && *str <= 13))
+// 		str++;
+// 	if (*str == '-')
+// 		sn = -1;
+// 	if ((*str == '-') || (*str == '+'))
+// 		str++;
+// 	while ((*str != '\0') && ('0' <= *str) && (*str <= '9'))
+// 	{
+// 		num = (num * 10) + (*str - '0');
+// 		if (num > 2147483647 && sn == 1)
+// 			return (-1);
+// 		else if (num < -2147483648 && sn == -1)
+// 			return (0);
+// 		str++;
+// 	}
+// 	return (num * sn);
+// }
 
 // int main(void)
 // {
